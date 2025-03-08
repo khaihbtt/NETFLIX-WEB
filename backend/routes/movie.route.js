@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.get("/trending", getTrendingMovie);
 router.get("/:id/trailers", getMovieTrailers);
-router.get("/:id/setails", getMovieDetails);
+router.get("/:id/details", getMovieDetails);
 router.get("/:id/similar", getSimilarMovie);
 router.get("/:category", getMovieCategory);
 

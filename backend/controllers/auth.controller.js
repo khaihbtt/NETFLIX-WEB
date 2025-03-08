@@ -102,3 +102,11 @@ export async function logout(req, res) {
     res.status(500).json({ success: false, message: "Lỗi server" });
   }
 }
+export async function authCheck(req, res) {
+  try {
+    res.status(200).json({ success: true, user: req.user });
+  } catch (error) {
+    console.log("error in layout controller", error.message);
+    res.status(500).json({ success: false, message: "Lỗi server" });
+  }
+}
