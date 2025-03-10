@@ -8,7 +8,7 @@ export const generateTokenAndSetCookie = (userId, res) => {
     maxAge: 15 * 24 * 60 * 60 * 1000, // 15 ngày
     httpOnly: true,
     sameSite: "None",
-    secure: ENV_VARS.JWT_SECRET !== "production",
+    secure: ENV_VARS.JWT_SECRET !== "development",
   });
   return token;
 };

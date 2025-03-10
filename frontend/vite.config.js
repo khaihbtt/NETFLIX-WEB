@@ -8,9 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://akamagi-netflix-trailers.onrender.com",
-        changeOrigin: true,
-        secure: false, // Bỏ qua kiểm tra SSL
+        target: "http://localhost:5000",
       },
     },
   },

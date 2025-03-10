@@ -9,10 +9,10 @@ import { useEffect } from "react";
 import { Loader } from "lucide-react";
 import WatchPage from "./pages/WatchPage";
 import SearchPage from "./pages/SearchPage";
+import NotFoundPage from "./pages/404";
 
 function App() {
   const { user, isCheckingAuth, authCheck } = userAuthStore();
-  console.log("auth user is here:", user);
 
   useEffect(() => {
     authCheck();
@@ -47,6 +47,7 @@ function App() {
           path="/search"
           element={user ? <SearchPage /> : <Navigate to={"/login"} />}
         />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
 
       <Footer />

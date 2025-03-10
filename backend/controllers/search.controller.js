@@ -25,7 +25,6 @@ export async function searchPreson(req, res) {
 
     res.status(200).json({ success: true, content: data.results });
   } catch (error) {
-    console.log("Error", error.message);
     res.status(500).json({ success: false, message: "loi server" });
   }
 }
@@ -52,7 +51,6 @@ export async function searchMovie(req, res) {
 
     res.status(200).json({ success: true, content: data.results });
   } catch (error) {
-    console.log("Error", error.message);
     res.status(500).json({ success: false, message: "loi server" });
   }
 }
@@ -79,7 +77,6 @@ export async function searchTv(req, res) {
 
     res.status(200).json({ success: true, content: data.results });
   } catch (error) {
-    console.log("Error", error.message);
     res.status(500).json({ success: false, message: "loi server" });
   }
 }

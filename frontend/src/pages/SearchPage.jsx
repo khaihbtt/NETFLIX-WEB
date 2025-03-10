@@ -23,7 +23,7 @@ const SearchPage = () => {
     e.preventDefault();
     try {
       const res = await axios.get(`/api/v1/search/${activeTab}/${searchTerm}`);
-      console.log("API Response:", res.data);
+
       setResults(res.data.content || []);
     } catch (error) {
       console.error("Search Error:", error);
